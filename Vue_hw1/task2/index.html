@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Задание 1</h1>
+    <button @click="reverseTextBtn">{{ btnText }}</button>
+    <hr>
+    <h1>Задание 2, 3</h1>
+    <ul>
+      <li v-for="(item, index) in items" v-on:click="delElementList(index)">{{ item }}</li>
+   </ul>
+    <button @click="addElementList">Добавить</button>
+    <hr>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const App = {
+      data() {
+        return {
+          btnText: 'Перевернуть',
+          items: ['Элемент 1', 'Элемент 2', 'Элемент 3', 'Элемент 4', 'Элемент 5'],
+        };
+      },
+        methods: {
+          reverseTextBtn() {
+            this.btnText = this.btnText.split('').reverse().join('');
+          },
+          addElementList() {
+            this.items.push("Новый элемент списка");
+          },
+          delElementList(index) {
+            this.items.splice(index, 1);
+          }
+        },
+    };
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
