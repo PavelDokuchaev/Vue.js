@@ -105,8 +105,13 @@ a {
       font-size: 18px;
       font-style: normal;
       font-weight: 600;
-      line-height: 125%; /* 22.5px */
+      line-height: 125%;
       letter-spacing: 0.36px;
+      border: none;
+    }
+
+    &__button:hover {
+      cursor: pointer;
     }
   }
 }
@@ -281,13 +286,16 @@ a {
 
   &-content {
     display: flex;
-    gap: 27px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     &__item {
+      width: 32%;
       position: relative;
       border: 1px solid #E7E7E7;
       border-radius: 60px;
       padding: 21px 21px 37px 21px;
+      margin-bottom: 30px;
 
       &-img {
         border-top-left-radius: 40px;
@@ -467,6 +475,8 @@ a {
     }
   }
 }
+
+@import 'articles';
 
 
 

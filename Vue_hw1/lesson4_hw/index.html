@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+    <ul>
+      <li v-for="product in products" :key="product.id">{{product.name}}, {{product.price}} руб.</li>
+    </ul>
+    <button @click="sortUp">Сортировать по возрастанию</button>
+    <button @click="sortDown">Сортировать по убыванию</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const App = {
+      data() {
+        return {
+          products: [
+            {id: 1, name: "nokia", price: 2000},
+            {id: 2, name: "samsung", price: 1000},
+            {id: 3, name: "xiaomi", price: 3000},
+            {id: 4, name: "huawei", price: 7000},
+            {id: 5, name: "iphone", price: 10000},
+            {id: 6, name: "honor", price: 4000},
+          ]
+        }
+      },
+      methods: {
+        sortUp() {
+          this.products.sort((a, b) => a.price - b.price);
+        },
+        sortDown() {
+          this.products.sort((a, b) => b.price - a.price);
+        },
+      },
+    }
+
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
