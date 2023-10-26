@@ -11,6 +11,9 @@
   <HeaderComponent />
   <ProjectComponenet />
   <FooterComponent />
+  <HeaderComponent />
+  <ProjectDetailsComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -20,6 +23,7 @@ import FooterComponent from './components/FooterComponent.vue';
 import ArticlesComponent from './components/ArticlesComponent.vue';
 import BlogDetailsComponent from './components/BlogDetailsComponent.vue';
 import ProjectComponenet from './components/ProjectComponenet.vue';
+import ProjectDetailsComponent from './components/ProjectDetailsComponent.vue';
 
 export default {
   components: {
@@ -28,7 +32,8 @@ export default {
     FooterComponent,
     ArticlesComponent,
     BlogDetailsComponent,
-    ProjectComponenet
+    ProjectComponenet,
+    ProjectDetailsComponent
   }
 };
 </script>
