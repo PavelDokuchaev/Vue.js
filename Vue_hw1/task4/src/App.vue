@@ -1,19 +1,14 @@
 <template>
   <HeaderComponent />
   <IndexComponent />
-  <FooterComponent />
   <HeaderComponent />
   <ArticlesComponent />
-  <FooterComponent />
   <HeaderComponent />
   <BlogDetailsComponent />
-  <FooterComponent />
   <HeaderComponent />
   <ProjectComponenet />
-  <FooterComponent />
   <HeaderComponent />
   <ProjectDetailsComponent />
-  <FooterComponent />
 </template>
 
 <script>
